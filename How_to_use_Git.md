@@ -91,11 +91,23 @@ $ git push
 
 把本地仓库与我们远程的github仓库相关联
 
+==仓库地址== 
+
+git@github.com:wawyw/XUPTSEC.git
+
 ```git
-$ git remote add origin https://github.com/wawyw/XUPTSEC.git
+$ git remote add origin git@github.com:wawyw/XUPTSEC.git
 ```
 
-关联后，就可以把本地库的内容推送到远程库上：
+**注意对于多人协作开发，那么每个人需各自从远程克隆仓库。**
+
+```
+$ git clone git@github.com:wawyw/XUPTSEC.git
+```
+
+这样各成员在自己的本地就拥有了向XUPTSEC仓库中提交代码(commit/push/merge/branch)的权限,就好比拥有这个仓库一样, 但是成员操作此仓库的时候使用的是自己的github账号和密码. 同样此时自己的github账号中并不会出现XUPTSEC仓库。
+
+关联或克隆完成后，就可以把本地库的内容推送到远程库上：
 
 ```
 $ git push -u origin master
@@ -132,15 +144,9 @@ $ git branch
 
 ### 2.2.在当前分支上完成对文件的修改，并提交
 
-切换至share目录
+在本地完成对此文件的创建，编辑，修改...
 
-```
-cd share
-```
-
-完成对此文件的创建，编辑，修改...
-
-提交文件至暂存区
+然后提交文件至暂存区
 
 ```git
 git add How_to_use_Git.md
@@ -211,9 +217,15 @@ To https://github.com/wawyw/XUPTSEC.git
 
 
 
+<hr>
 
+### 参考资料
 
+[1] [Git简介 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000)
 
+[2] [Git 多人协作开发的过程](https://blog.csdn.net/wangliang888888/article/details/80536277)
+
+[3] [[Git & GitHub] 怎么团队合作多人开发项目](https://bluetata.blog.csdn.net/article/details/81391835?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control)
 
 
 
