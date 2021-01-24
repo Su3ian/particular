@@ -4,7 +4,7 @@
 
 ### 目录说明
 
-<img src="https://i.loli.net/2021/01/24/7nRciMqQa6gPCLf.png">
+<img src="https://i.loli.net/2021/01/24/7nRciMqQa6gPCLf.png" style="zoom:30%">
 
 几种编程命名方式
 AaBa式：DaliyPlan
