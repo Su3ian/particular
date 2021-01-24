@@ -316,7 +316,13 @@ To https://github.com/wawyw/XUPTSEC.git
 
 
 
+<hr>参考资料
 
+[git: 拒绝合并无关的历史(报错原因及解决) ](https://blog.csdn.net/qq_39713775/article/details/100048096)
 
+再添上我参考的文章：
 
+[1git命令的使用,查看git仓库状态,添加文件到git跟踪,git提交,查看git分支,查看git仓库日志信息,切换git分支，解决git分支合并后出现冲突的问题](https://blog.csdn.net/toto1297488504/article/details/41398025?utm_source=app&app_version=4.5.0)
+
+[Git的使用--如何将本地项目上传到Github](https://blog.csdn.net/zamamiro/article/details/70172900?utm_source=app&app_version=4.5.0)
 
