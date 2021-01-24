@@ -229,11 +229,90 @@ To https://github.com/wawyw/XUPTSEC.git
 
 
 
+## 3.补充：
+
+### 3.1.前提
+
+我想在初始化仓库后，创建新分支work，但是要实现这个目的就需要先进行commit(这个我也不清楚具体原因)，于是我就先进行了
+
+```
+git add <filename>
+git commit -m "说明"
+```
+
+之后才进行创建分支work
+
+```
+git branch work
+```
+
+而这会导致此数据既没有被push到远程仓库也没有被del，所以会报一个fatal，如下：
+
+```
+$ git pull 
+Username for 'https://github.com': airy324
+Password for 'https://airy324@github.com': 
+warning: 没有共同的提交
+来自 https://github.com/wawyw/XUPTSEC
+ * [新分支]          ljz201128-patch-1 -> origin/ljz201128-patch-1
+ * [新分支]          master            -> origin/master
+ * [新分支]          zzmxyz-patch-1    -> origin/zzmxyz-patch-1
+当前分支没有跟踪信息。
+请指定您要合并哪一个分支。
+详见 git-pull(1)。
+
+    git pull <远程> <分支>
+
+如果您想要为此分支创建跟踪信息，您可以执行：
+
+    git branch --set-upstream-to=origin/<分支> master
+```
+
+```
+$ git pull origin master 
+Username for 'https://github.com': airy324
+Password for 'https://airy324@github.com': 
+来自 https://github.com/wawyw/XUPTSEC
+ * branch            master     -> FETCH_HEAD
+fatal: 拒绝合并无关的历史
+```
+
+解决方法：让git在检验时忽略掉所谓无关历史数据
+
+```
+$ git pull origin master --allow-unrelated-histories
+```
+
+之后又出现了问题，在执行完
+
+```
+git rebase master
+git merge work(这个work是自己创建的分支，名儿可能不一样)
+```
 
 
 
+```
+$ git push 
+fatal: 当前分支 master 没有对应的上游分支。
+为推送当前分支并建立与远程上游的跟踪，使用
 
+    git push --set-upstream origin master
 
+$ git push --set-upstream origin master 
+Username for 'https://github.com': airy324
+Password for 'https://airy324@github.com': 
+枚举对象: 115, 完成.
+对象计数中: 100% (115/115), 完成.
+使用 8 个线程进行压缩
+压缩对象中: 100% (106/106), 完成.
+写入对象中: 100% (114/114), 6.26 MiB | 388.00 KiB/s, 完成.
+总共 114 （差异 2），复用 0 （差异 0）
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/wawyw/XUPTSEC.git
+   6b3d8ee..2d17948  master -> master
+分支 'master' 设置为跟踪来自 'origin' 的远程分支 'master'。
+```
 
 
 
