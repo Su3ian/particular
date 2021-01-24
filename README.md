@@ -4,12 +4,12 @@
 
 ### 目录说明
 
-<img src="https://i.loli.net/2021/01/24/7nRciMqQa6gPCLf.png" style="zoom:30%">
+<img src="https://i.loli.net/2021/01/24/7nRciMqQa6gPCLf.png" style="zoom:25%;" >
 
-几种编程命名方式
-AaBa式：DaliyPlan
-ab_ab式：daily_plan
-AB_AB式：Daily_Plan
+几种编程命名方式<br>
+AaBa式：DaliyPlan<br>
+ab_ab式：daily_plan<br>
+AB_AB式：Daily_Plan<br>
 咱们用第三种，目录统一英文；文件不做限制，推荐英文
 
 **注意：**
