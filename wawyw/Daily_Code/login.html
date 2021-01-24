@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <!-- 内部样式表 -->
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+
+        h1 {
+            margin-top: 100px;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        div {
+          width: 40%;
+          margin: 0 auto;
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        input[type=submit], 
+        .register{
+          width: 50%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 200px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer; /* 光标形状 */
+        }
+
+        input[type=submit]:hover,
+        .register:hover {
+          background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>一个再简单不过的登录框</h1>
+​
+<div>
+  <form action="/action_page.php">
+    <label for="uname">Username</label>
+    <input type="text" id="uname" name="username" autocomplete="off" placeholder="Your username...">
+​
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" name="password" placeholder="Your password...">
+  
+    <input type="submit" value="登录">
+    <button class="register"><a href="./register.html" target="_blank">没有账号，马上注册</a></button>
+  </form>
+</div>
+​
+</body>
+</html>
