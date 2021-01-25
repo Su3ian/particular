@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       /* 
+        js数据类型
+        1.简单数据类型（Number,String,Boolean,Undefined,Null）
+        2.复杂数据类型（object）
+        */
+
+        // isNaN() 判断非数字，返回 ture / false
+        console.log(isNaN('a')); // true
+        console.log(isNaN(1)); //false
+
+        // 转义符 \n换行
+        console.log('换\n行');
+
+        // 变量名.length，获取字符串长度
+        var str = 'I love you';
+        console.log(str.length); //10
+
+        //字符串拼接 +
+        var year = 2021;
+        console.log('请回答' + year + '!');
+
+        // typeof 变量名，获取变量数据类型
+        var flag = true;
+        console.log(typeof flag); // boolean
+
+        //转换为字符型 隐式转换
+        var num = 18;
+        console.log(typeof (num + '')) ; //string
+
+        //转换为数字型 parseInt() parseFloat()
+        var PI = '3.14';
+        console.log(parseInt(PI)); // 3 取整
+        console.log(parseFloat(PI)); // 3.14
+
+    </script>
+</body>
+</html>
